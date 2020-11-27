@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Project_test</string>
+    <string name="term_policy">"سياسة الاستخدام "</string>
+    <string name="policy_text">أي مواقع او خدمات تجمع بيانات من المستخدمين .تتتبع المستخدمين بالتحليلات أو تعرض إعلانات تحتاج الى سياسة الخصوصة سيكون عليك التأكد من ان سياسة الخصوصية ترقى لمعايير لوائح تنظيم حماية البيانات العامة n\
+   1-ما هي المعلومات التي تقوم بجمعها n\
+        2- كيف تجمع المعلومات   n\
+        3- كيف تقوم بحفظ وحماية المعلومات    n\
+        أي مواقع او خدمات تجمع بيانات من المستخدمين .تتتبع المستخدمين بالتحليلات أو تعرض إعلانات تحتاج الى سياسة الخصوصة سيكون عليك التأكد من ان سياسة الخصوصية ترقى لمعايير لوائح تنظيم حماية البيانات العامة
+    </string>
+    <string name="btn_continue">استمر</string>
+    <string name="gree_term">"انا اوافق على هذه الشروط "</string>
+    <string name="make_comfort">نصنع الراحة </string>
+    <string name="for_you">لاجلكم</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="create_account">حساب جديد</string>
+    <string name="wlcome_in_tgas">اهلا بك في تطبيق  TGAS    </string>
+    <string name="how_to_use_app">كيفية استخدام التطبيق</string>
+    <string name="or_show_this_video">او شاهد هذا الفيديو لمعرفة كيفية الاستخدام</string>
+    <string name="skip">تخطي </string>
+</resources>

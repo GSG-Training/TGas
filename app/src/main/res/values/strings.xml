@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Project_test</string>
+    <string name="term_policy">Term of policy</string>
+    <string name="policy_text">Any sites or services that collect data from users.Trace users With analytics or ads that need a privacy policy you will have to Ensure that the Privacy Policy meets the standards of the Protection Regulation General data \n\n 1-What information do you collect \n 2- How to collect information \n 3- How to save and protect information \n\n Any sites or services that collect data from users.Trace users With analytics or ads that need a privacy policy you will have to Ensure that the Privacy Policy meets the standards of the Protection Regulation General data   </string>
+    <string name="btn_continue">continue</string>
+    <string name="gree_term">I agree with this term</string>
+    <string name="make_comfort">make comfort</string>
+    <string name="for_you">for you</string>
+    <string name="login">LogIn</string>
+    <string name="create_account">Create account</string>
+    <string name="wlcome_in_tgas">welcome in TGAS Application</string>
+    <string name="how_to_use_app">How to use App</string>
+    <string name="or_show_this_video">Or Show this video</string>
+    <string name="skip">Skip</string>
+    <string name="tgas" translatable="false">TGAS</string>
+</resources>
