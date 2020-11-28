@@ -4,97 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_background"
     tools:context=".CodeVerification">
 
     <ImageView
         android:id="@+id/image_verification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/image_verification" />
 
-    <TextView
-        android:id="@+id/text_new_password"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_8"
-        android:gravity="center"
-        android:text="code Verification"
-        android:textColor="@color/yellow_background"
-        android:textSize="@dimen/text_size_20"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_verification" />
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        app:cardCornerRadius="16dp"
+        app:contentPadding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/image_verification">
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_16"
-        android:text="Code"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/text_size_20"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@id/text_new_password" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/code_shape"
-        app:layout_constraintEnd_toStartOf="@+id/textView7"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            <TextView
+                android:id="@+id/text_new_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:gravity="center"
+                android:text="code Verification"
+                android:textColor="@color/yellow_background"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/code_shape"
-        app:layout_constraintEnd_toStartOf="@+id/textView8"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
 
-    <EditText
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/code_shape"
-        app:layout_constraintEnd_toStartOf="@+id/textView9"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="@+id/textView7" />
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/padding_8"
+                android:text="To restore your password enter your code here"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_new_password" />
 
-    <EditText
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/code_shape"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="@+id/textView8" />
+            <EditText
+                android:id="@+id/edit1"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/code_shape"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textCursorDrawable="@drawable/cursor_edit_code"
+                app:layout_constraintEnd_toStartOf="@+id/edit2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_20"
-        android:backgroundTint="@color/yellow_background"
-        android:padding="@dimen/padding_8"
-        android:text="Verify"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView5" />
+            <EditText
+                android:id="@+id/edit2"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/code_shape"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textCursorDrawable="@drawable/cursor_edit_code"
+                app:layout_constraintEnd_toStartOf="@+id/edit3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/edit1"
+                app:layout_constraintTop_toTopOf="@+id/edit1" />
+
+            <EditText
+                android:id="@+id/edit3"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/code_shape"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textCursorDrawable="@drawable/cursor_edit_code"
+                app:layout_constraintEnd_toStartOf="@+id/edit4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/edit2"
+                app:layout_constraintTop_toTopOf="@+id/edit1" />
+
+            <EditText
+                android:id="@+id/edit4"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:background="@drawable/code_shape"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textCursorDrawable="@drawable/cursor_edit_code"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/edit3"
+                app:layout_constraintTop_toTopOf="@id/edit1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:backgroundTint="@color/yellow_background"
+                android:padding="@dimen/padding_8"
+                android:text="Verify"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
