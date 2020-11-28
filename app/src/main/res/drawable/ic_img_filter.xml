@@ -1,0 +1,54 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="35dp"
+    android:height="35dp"
+    android:viewportWidth="23.5"
+    android:viewportHeight="23">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M23,20.5L0.5,20.5"
+        android:strokeWidth="1"
+        android:strokeColor="#7A7777"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M23,11.5L0.5,11.5"
+        android:strokeWidth="1"
+        android:strokeColor="#7A7777"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M23,2.5L0.5,2.5"
+        android:strokeWidth="1"
+        android:strokeColor="#7A7777"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#fff"
+        android:pathData="M12.5,20.5m-0,-2.5a2.5,2.5 0,1 1,-0 5a2.5,2.5 0,1 1,-0 -5"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M12.5,20.5m-0,-2a2,2 0,1 1,-0 4a2,2 0,1 1,-0 -4"
+        android:strokeWidth="1"
+        android:strokeColor="#7A7777" />
+    <path
+        android:fillColor="#fff"
+        android:pathData="M5.5,11.5m-0,-2.5a2.5,2.5 0,1 1,-0 5a2.5,2.5 0,1 1,-0 -5"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M5.5,11.5m-0,-2a2,2 0,1 1,-0 4a2,2 0,1 1,-0 -4"
+        android:strokeWidth="1"
+        android:strokeColor="#7A7777" />
+    <path
+        android:fillColor="#fff"
+        android:pathData="M20.5,2.5m-0,-2.5a2.5,2.5 0,1 1,-0 5a2.5,2.5 0,1 1,-0 -5"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M20.5,2.5m-0,-2a2,2 0,1 1,-0 4a2,2 0,1 1,-0 -4"
+        android:strokeWidth="1"
+        android:strokeColor="#7A7777" />
+</vector>
