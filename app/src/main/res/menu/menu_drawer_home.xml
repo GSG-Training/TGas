@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="profile"/>
+    <item android:id="@+id/order"
+       android:icon="@drawable/ic_checklist"
+     android:title="My order"/>
+    <item android:id="@+id/payment"
+        android:icon="@drawable/ic_baseline_payment_24"
+        android:title="Payment"/>
+    <item android:id="@+id/about_us"
+        android:icon="@drawable/ic_request"
+        android:title="about us"/>
+
+    <item android:id="@+id/policy_data"
+        android:icon="@drawable/ic_policydata"
+        android:title="Policy of terms"/>
+    <item android:id="@+id/setting"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Setting"/>
+    <item android:id="@+id/logout"
+        android:icon="@drawable/ic_log_out"
+        android:title="Logout"/>
+
+</menu>

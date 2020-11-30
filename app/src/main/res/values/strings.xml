@@ -13,4 +13,6 @@
     <string name="or_show_this_video">Or Show this video</string>
     <string name="skip">Skip</string>
     <string name="tgas" translatable="false">TGAS</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
 </resources>
