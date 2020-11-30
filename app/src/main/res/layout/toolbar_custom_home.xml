@@ -2,6 +2,7 @@
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/purple_background"
     app:navigationIcon="@drawable/ic_baseline_menu_24">
