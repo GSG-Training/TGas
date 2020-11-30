@@ -16,11 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity">
-
-        </activity>
+        <activity android:name=".SignUpActivity"></activity>
         <activity android:name=".NewPassword" />
-        <activity android:name=".CodeVerification"></activity>
+        <activity android:name=".CodeVerification" />
         <activity android:name=".SendVerification" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".GuideActivity" />
