@@ -60,5 +60,15 @@
         android:textSize="16sp"
         android:textColor="@android:color/black"
         />
-
+    <TextView
+        android:id="@+id/date_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="3/10/2019"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
