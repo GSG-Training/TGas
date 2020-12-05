@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_test">
-        <activity android:name=".CompanyActivity"></activity>
+        <activity android:name=".MyorderActivity"></activity>
+        <activity android:name=".CompanyActivity" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".HomeActivity">
             <intent-filter>
