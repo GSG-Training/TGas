@@ -116,6 +116,14 @@
 
 
             </RadioGroup>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/linear_client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+>
+
 
             <TextView
                 android:id="@+id/textView5"
@@ -174,6 +182,107 @@
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Company name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+
+                    />
+                <EditText
+                    android:id="@+id/edit_company_name"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="4dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/company_password_confirm"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/edit_gray_stroke"/>
+                <TextView
+                    android:id="@+id/company_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Address"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edit_company_name"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+
+                    />
+                <EditText
+                    android:id="@+id/edit_company_address"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="4dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/company_password_confirm"
+                    app:layout_constraintTop_toBottomOf="@id/edit_company_name"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/edit_gray_stroke"/>
+                <TextView
+                    android:id="@+id/company_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="password"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edit_company_address"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/edit_company_password"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="4dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/company_password_confirm"
+                    app:layout_constraintTop_toBottomOf="@id/edit_company_address"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/edit_gray_stroke"/>
+
+                <TextView
+                    android:id="@+id/company_password_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="confirm password"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edit_company_password"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+
+                    />
+                <EditText
+                    android:id="@+id/edit_company_confirm_password"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="4dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/company_password_confirm"
+                    app:layout_constraintTop_toBottomOf="@id/edit_company_password"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/edit_gray_stroke"/>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
@@ -185,8 +294,8 @@
                 android:text="SignUp"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white" />
-
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
 
