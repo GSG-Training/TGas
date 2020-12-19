@@ -1,14 +1,14 @@
 package com.example.project_test;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SendVerification extends AppCompatActivity {
+import android.os.Bundle;
+
+public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_send_verification);
+        setContentView(R.layout.activity_profile);
     }
 }

@@ -1,8 +1,10 @@
-package com.example.project_test;
+package com.example.project_test.user;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.project_test.R;
 
 public class NewPassword extends AppCompatActivity {
 

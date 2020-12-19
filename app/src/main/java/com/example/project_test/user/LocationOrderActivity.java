@@ -1,14 +1,15 @@
-package com.example.project_test;
+package com.example.project_test.user;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class PaymentActivity extends AppCompatActivity {
+import com.example.project_test.R;
+
+public class LocationOrderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment);
+        setContentView(R.layout.activity_location_order);
     }
 }

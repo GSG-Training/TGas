@@ -1,4 +1,4 @@
-package com.example.project_test;
+package com.example.project_test.user;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
+
+import com.example.project_test.R;
 
 public class HomeActivity extends AppCompatActivity {
    DrawerLayout drawerLayout;

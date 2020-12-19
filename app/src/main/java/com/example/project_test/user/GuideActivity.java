@@ -1,4 +1,4 @@
-package com.example.project_test;
+package com.example.project_test.user;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.project_test.R;
+import com.example.project_test.user.guide;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;

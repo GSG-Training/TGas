@@ -1,4 +1,4 @@
-package com.example.project_test;
+package com.example.project_test.user;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -9,6 +9,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.project_test.R;
 
 public class CodeVerification extends AppCompatActivity {
     EditText editText1, editText2, editText4, editText3;

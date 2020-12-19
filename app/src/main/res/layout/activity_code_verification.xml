@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_background"
-    tools:context=".CodeVerification">
+    tools:context=".user.CodeVerification">
 
     <ImageView
         android:id="@+id/image_verification"
