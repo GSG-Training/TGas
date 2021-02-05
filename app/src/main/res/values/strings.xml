@@ -15,6 +15,13 @@
     <string name="tgas" translatable="false">TGAS</string>
     <string name="open" translatable="false">open</string>
     <string name="close" translatable="false">close</string>
+    <string name="gaza" translatable="false">GAZA</string>
+    <string name="khanyonis" translatable="false">KhanYonis</string>
+    <string name="deirbalah" translatable="false">Deir-Balah</string>
+    <string name="rafah" translatable="false">Rafah</string>
+    <string name="nuseirat" translatable="false">Nuseirat</string>
+    <string name="northgaza" translatable="false">North Gaza</string>
+    <string name="southgaza" translatable="false">South Gaza</string>
     <!-- TODO: Remove or change this placeholder text -->
 
 </resources>

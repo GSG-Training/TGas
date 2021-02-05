@@ -89,17 +89,16 @@
                 android:id="@+id/textInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/padding_8">
+                android:padding="8dp"
+                >
 
 
                 <com.google.android.material.textfield.TextInputEditText
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-
+                    android:id="@+id/edit_email"
                     android:background="@android:color/white"
-                    android:hint="email"
 
 
                     />
@@ -120,21 +119,28 @@
                 android:id="@+id/textInputLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:padding="@dimen/padding_8"
+                android:padding="8dp"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:id="@+id/edit_password"
                     android:background="@android:color/white"
-                    android:hint="password"
+                    android:inputType="textPassword"
 
                     />
             </com.google.android.material.textfield.TextInputLayout>
-
+<TextView
+    android:visibility="gone"
+    android:id="@+id/txt_error"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Error in email or password"
+    android:textSize="16sp"
+    android:textColor="@android:color/holo_red_light"
+    />
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
@@ -144,7 +150,7 @@
                 android:textColor="@color/purple_background" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/button"
+                android:id="@+id/btn_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|bottom"
@@ -155,6 +161,7 @@
                 android:textAllCaps="false"
                 android:textColor="@android:color/white" />
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
 
@@ -165,14 +172,14 @@
         android:layout_marginTop="@dimen/margin_16"
         android:text="you don't have an account?"
         android:textColor="@android:color/black"
-        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintEnd_toStartOf="@+id/txt_signup"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card_login" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/txt_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"

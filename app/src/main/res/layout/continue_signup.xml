@@ -82,6 +82,7 @@
                 android:textSize="16sp" />
 
             <Spinner
+                android:id="@+id/spinner_city"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
@@ -98,30 +99,33 @@
                 android:textSize="16sp" />
 
             <RadioGroup
+                android:id="@+id/radio_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/padding_8">
 
                 <RadioButton
+                    android:id="@+id/radio_client"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/yellow_background"
                     android:text="client" />
 
                 <RadioButton
+                    android:id="@+id/radio_representative"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/yellow_background"
-                    android:text="Representive" />
+                    android:text="Representative" />
 
 
             </RadioGroup>
             <LinearLayout
-                android:visibility="gone"
                 android:id="@+id/linear_client"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:visibility="gone"
 >
 
 
@@ -150,12 +154,12 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/white"
                     android:inputType="textPassword"
-
+                      android:id="@+id/edit_password_client"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/txt_signup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_8"
@@ -177,6 +181,7 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/white"
                     android:inputType="textPassword"
+                    android:id="@+id/edit_confirm_password_client"
 
 
                     />
@@ -186,8 +191,10 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_representative"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:visibility="visible">
                 <TextView
                     android:id="@+id/company_name"
                     android:layout_width="wrap_content"
@@ -254,7 +261,21 @@
                     app:layout_constraintStart_toEndOf="@id/company_password_confirm"
                     app:layout_constraintTop_toBottomOf="@id/edit_company_address"
                     android:layout_marginStart="8dp"
+                    android:inputType="textPassword"
                     android:background="@drawable/edit_gray_stroke"/>
+                <TextView
+                    android:id="@+id/txt_length_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password length should be at least 6 "
+                    app:layout_constraintEnd_toEndOf="@id/edit_company_password"
+                    app:layout_constraintTop_toBottomOf="@id/edit_company_password"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="10sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="3dp"
+                    android:visibility="gone"
+                    />
 
                 <TextView
                     android:id="@+id/company_password_confirm"
@@ -263,7 +284,7 @@
                     android:layout_marginTop="@dimen/margin_8"
                     android:text="confirm password"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/edit_company_password"
+                    app:layout_constraintTop_toBottomOf="@id/txt_length_password"
                     android:textColor="@color/black"
                     android:textSize="16sp"
 
@@ -276,15 +297,26 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/company_password_confirm"
-                    app:layout_constraintTop_toBottomOf="@id/edit_company_password"
+                    app:layout_constraintTop_toBottomOf="@id/txt_length_password"
                     android:layout_marginStart="8dp"
+                    android:inputType="textPassword"
                     android:background="@drawable/edit_gray_stroke"/>
 
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/not_matched"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="password not matched"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/holo_red_light"
+                android:textStyle="bold"
+                />
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/button"
+                android:id="@+id/btn_signup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|bottom"

@@ -100,6 +100,7 @@
                     android:drawableStart="@drawable/ic_baseline_person_24"
                     android:drawablePadding="5dp"
                     android:inputType="text"
+                    android:id="@+id/edit_first_name"
 
 
                     />
@@ -129,6 +130,7 @@
                     android:drawableStart="@drawable/ic_baseline_person_24"
                     android:drawablePadding="5dp"
                     android:inputType="text"
+                    android:id="@+id/edit_last_name"
 
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -159,18 +161,20 @@
                     android:drawableStart="@drawable/ic_baseline_email_24"
                     android:drawablePadding="5dp"
                     android:inputType="textEmailAddress"
+                    android:id="@+id/edit_email"
 
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/txt_signup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_8"
                 android:text="Phone Number"
                 android:textColor="@color/black"
                 android:textSize="16sp"
+
 
                 />
 
@@ -187,12 +191,13 @@
                     android:drawableStart="@drawable/ic_baseline_local_phone_24"
                     android:drawablePadding="5dp"
                     android:inputType="phone"
+                    android:id="@+id/edit_phone_number"
 
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/button"
+                android:id="@+id/btn_continue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|bottom"
