@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_background"
-    tools:context=".user.GuideActivity">
+    tools:context=".view.activities.user.GuideActivity">
 
     <ImageView
         android:id="@+id/welcome_image"
@@ -93,6 +93,7 @@
             android:textSize="@dimen/text_size_16" />
 
         <Button
+            android:id="@+id/btn_skip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"

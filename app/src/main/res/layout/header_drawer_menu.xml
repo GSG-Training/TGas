@@ -4,15 +4,19 @@
     android:layout_height="120dp"
     android:background="#7777"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-     <ImageView
+     <de.hdodenhof.circleimageview.CircleImageView
          android:id="@+id/img_person"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
+         android:layout_width="60dp"
+         android:layout_height="60dp"
          android:src="@drawable/ic_baseline_person_24"
          app:layout_constraintStart_toStartOf="parent"
          app:layout_constraintTop_toTopOf="parent"
+         app:civ_border_width="1dp"
+         android:scaleType="centerCrop"
+         app:civ_border_color="@color/purple_background"
          android:layout_margin="16dp"/>
     <TextView
+        android:id="@+id/user_name_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nour Terry"

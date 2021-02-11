@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_background"
-    tools:context=".user.PolicyActivity">
+    tools:context=".view.activities.user.PolicyActivity">
 
     <ImageView
         android:id="@+id/image_policy"
@@ -54,6 +54,7 @@
                 android:textSize="16dp" />
 
             <RadioButton
+                android:id="@+id/radio_agree"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
@@ -63,10 +64,12 @@
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/btn_continue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
+                android:enabled="false"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@color/yellow_background"
                 android:padding="16dp"

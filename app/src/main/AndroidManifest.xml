@@ -9,39 +9,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_test">
-        <activity android:name=".user.SignUpActivity2"></activity>
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".company.CompanyHome">
+        <activity android:name=".view.activities.user.SignUpActivity2"/>
+        <activity android:name=".view.activities.company.CompanyHome">
             <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
+               . <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
 
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".user.LocationOrderActivity" />
-        <activity android:name=".user.PaymentActivity" />
-        <activity android:name=".user.AboutUsActivity" />
-        <activity android:name=".user.MyorderActivity" />
-        <activity android:name=".user.CompanyActivity" />
-        <activity android:name=".user.HomeActivity">
+        <activity android:name=".view.activities.user.LocationOrderActivity" />
+        <activity android:name=".view.activities.user.PaymentActivity" />
+        <activity android:name=".view.activities.user.AboutUsActivity" />
+        <activity android:name=".view.activities.user.MyorderActivity" />
+        <activity android:name=".view.activities.user.CompanyActivity" />
+        <activity android:name=".view.activities.user.HomeActivity">
 
         </activity>
-        <activity android:name=".user.SignUpActivity" />
-        <activity android:name=".user.NewPassword" />
-        <activity android:name=".user.CodeVerification" />
-        <activity android:name=".user.SendVerification" />
-        <activity android:name=".user.LoginActivity" >
+        <activity android:name=".view.activities.user.SignUpActivity" />
+        <activity android:name=".view.activities.user.NewPassword" />
+        <activity android:name=".view.activities.user.CodeVerification" />
+        <activity android:name=".view.activities.user.SendVerification" />
+        <activity android:name=".view.activities.user.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".user.GuideActivity" />
-        <activity android:name=".user.PolicyActivity" />
-        <activity android:name=".user.MainActivity" />
+        <activity android:name=".view.activities.user.GuideActivity" />
+        <activity android:name=".view.activities.user.PolicyActivity" />
+        <activity android:name=".view.activities.user.MainActivity" />
+        <activity android:name=".view.activities.ProfileActivity" />
     </application>
 
 </manifest>
