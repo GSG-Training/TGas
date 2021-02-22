@@ -47,14 +47,15 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-auth:20.0.2'
- //   implementation 'com.google.firebase:firebase-admin:7.1.0'
     implementation 'com.google.firebase:firebase-database:19.6.0'
     implementation('com.google.firebase:firebase-firestore:22.0.2'){
         exclude module: 'protolite-well-known-types'
       //  exclude module:'META-INF/INDEX.LIST'
     }
-
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

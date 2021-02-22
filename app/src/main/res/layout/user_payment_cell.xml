@@ -20,13 +20,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
-        android:text="You paid for Company1 100$ at 10/1/2020"
+        android:text="@string/you_paid_for_company1_100_at_10_1_2020"
         android:textColor="@android:color/black"
         android:textSize="16dp"
         app:layout_constraintStart_toEndOf="@+id/img_payment_cell"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/txt_review_purchase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="review the purchase"

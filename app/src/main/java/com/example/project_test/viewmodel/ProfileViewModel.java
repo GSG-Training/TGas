@@ -27,8 +27,15 @@ public class ProfileViewModel extends AndroidViewModel {
         Log.d("Edit","edit ProfileViewModel");
         profileRepository.editUserData(FullName,phoneNumber);
     }
+    public void editCompanyData(String FullName,String phoneNumber,String companyName){
+        Log.d("Edit","edit ProfileViewModel");
+        profileRepository.editCompanyData(FullName,phoneNumber,companyName);
+    }
     public void getUserData(){
         profileRepository.getUserData();
+    }
+    public void  getCompanyData(){
+        profileRepository.getCompanyData();
     }
     public void setActivity(Activity activity) {
         profileRepository.setActivity(activity);

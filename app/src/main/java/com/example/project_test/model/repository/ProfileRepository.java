@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.project_test.model.entitiy.Result;
+import com.example.project_test.model.utils.Company;
 import com.example.project_test.model.utils.Users;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -30,7 +31,6 @@ public class ProfileRepository {
     public  ProfileRepository(Application application) {
         mAuth=FirebaseAuth.getInstance();
         dataProfile=new MutableLiveData<>() ;
-        mDatabase= FirebaseDatabase.getInstance().getReference("users");
         firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
 
     }
@@ -43,6 +43,7 @@ public class ProfileRepository {
         return profileRepository;
     }
    public void getUserData(){
+       mDatabase= FirebaseDatabase.getInstance().getReference("users");
        mDatabase.child(firebaseUser.getUid())
        .addValueEventListener(new ValueEventListener() {
            @Override
@@ -56,13 +57,29 @@ public class ProfileRepository {
            public void onCancelled(@NonNull DatabaseError error) {
 
            }
-       });
+       });}
+       public void getCompanyData(){
+           mDatabase= FirebaseDatabase.getInstance().getReference("Companies");
+           mDatabase.child(firebaseUser.getUid())
+                   .addValueEventListener(new ValueEventListener() {
+                       @Override
+                       public void onDataChange(@NonNull DataSnapshot snapshot) {
+                           Company company=snapshot.getValue(Company.class);
+                           dataProfile.setValue(Result.success(company));
 
+                       }
+
+                       @Override
+                       public void onCancelled(@NonNull DatabaseError error) {
+
+                       }
+                   });
 
 
     }
 
     public void editUserData(String FullName,String phoneNumber){
+        mDatabase= FirebaseDatabase.getInstance().getReference("users");
         mDatabase.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -71,6 +88,29 @@ public class ProfileRepository {
                 user.setFullName(FullName);
                 user.setPhoneNumber(phoneNumber);
                 Map<String,Object> updates=user.toMap();
+                mDatabase.child(firebaseUser.getUid()).updateChildren(updates);
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
+    public void editCompanyData(String FullName,String phoneNumber,String CompanyName){
+        mDatabase= FirebaseDatabase.getInstance().getReference("Companies");
+        mDatabase.child(firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Log.d("Edit","edit ProfileRepository");
+                Company company=snapshot.getValue(Company.class);
+                company.setFullName(FullName);
+                company.setPhoneNumber(phoneNumber);
+                company.setCompanyName(CompanyName);
+                Map<String,Object> updates=company.toMap();
                 mDatabase.child(firebaseUser.getUid()).updateChildren(updates);
 
 

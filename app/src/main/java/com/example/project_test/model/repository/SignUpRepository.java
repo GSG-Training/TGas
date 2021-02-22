@@ -100,12 +100,13 @@ public class SignUpRepository {
       }
 
     private void SaveCompanyDataInRealTimeDatabase(String email,String password,String CompanyName,String phone,String FullName,String address,String city) {
-        Company company=new Company(email,phone,CompanyName,FullName,password,address,city);
+        Company company=new Company(email,phone,CompanyName,FullName,password,address,city,0,0);
         mDatabase.child("Companies").child(user.getUid()).setValue(company);
     }
 
     private void SaveUserDataInRealTimeDatabase(String email,String password,String phone,String FullName,String city) {
-        Users muser=new Users(email,phone,password,FullName,city);
+        int balance=0;
+        Users muser=new Users(email,phone,password,FullName,city,balance);
         mDatabase.child("users").child(user.getUid()).setValue(muser);
     }
 

@@ -18,6 +18,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.project_test.R;
+import com.example.project_test.model.utils.notification.MyFirebaseMessageService;
+import com.example.project_test.model.utils.notification.Token;
 import com.example.project_test.view.activities.ProfileActivity;
 import com.example.project_test.view.adapter.CompanyAdapter;
 import com.example.project_test.model.utils.Company;
@@ -42,6 +44,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
    NavigationView navigationView;
    TextView userName_header;
    View header_view;
+   List<String> keys=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,13 +63,23 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle actionBarDrawerToggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         actionBarDrawerToggle.syncState();
-        CompanyAdapter companyAdapter=new CompanyAdapter(this,companies);
+        CompanyAdapter companyAdapter=new CompanyAdapter(this, companies, new CompanyAdapter.OnItemClicked() {
+            @Override
+            public void onClicked(int position) {
+                Intent intent=new Intent(HomeActivity.this,CompanyActivity.class);
+                intent.putExtra("UID",keys.get(position));
+                startActivity(intent);
+
+            }
+        });
         DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference("Companies");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot: snapshot.getChildren()) {
                     // TODO: handle the post
+                    Log.d("Key",postSnapshot.getKey());
+                    keys.add(postSnapshot.getKey());
                     companies.add(postSnapshot.getValue(Company.class));
                     companyAdapter.notifyDataSetChanged();
                     Log.d("SIZE", String.valueOf(companies.size()));
@@ -101,6 +114,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
             }
         });
+        updateToken(MyFirebaseMessageService.getToken(this));
+
     }
 
     private void showDialogLogOut() {
@@ -153,6 +168,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.setting:
+                startActivity(new Intent(HomeActivity.this,SettingActivity.class));
 
                 break;
             case R.id.logout:
@@ -165,5 +181,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 
         return true;
+    }
+    private void updateToken(String token){
+        FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+        DatabaseReference databaseReference=FirebaseDatabase.getInstance().getReference("Token");
+        Token token1=new Token(token);
+        databaseReference.child(user.getUid()).setValue(token1);
+
     }
 }

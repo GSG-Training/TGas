@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
     tools:context=".view.activities.user.MyorderActivity">
 
     <TextView
@@ -40,17 +39,19 @@
                 android:id="@+id/txt_order_accepted"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="order waiting accept"
+                android:text="order waiting to accept"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
+                android:id="@+id/img_wait"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycle_accepted"
@@ -88,12 +89,13 @@
                 android:id="@+id/txt_not_complete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="order that executing"
+                android:text="order in executing"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
+                android:id="@+id/img_exec"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
@@ -136,12 +138,13 @@
                 android:id="@+id/txt_order_complete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="order that completed"
+                android:text="completed order  "
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
+                android:id="@+id/img_complete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
@@ -183,12 +186,13 @@
                 android:id="@+id/txt_order_canceled"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="order that canceled"
+                android:text="canceled order"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
+                android:id="@+id/img_canceled"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_keyboard_arrow_down_24"

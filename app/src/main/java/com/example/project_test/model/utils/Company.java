@@ -1,5 +1,8 @@
 package com.example.project_test.model.utils;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Company {
     private String email;
     private String phoneNumber;
@@ -8,18 +11,22 @@ public class Company {
     private String password;
     private  String Address;
     private String city;
+    private int p_voted;
+    private float rate;
 
     public Company() {
     }
 
-    public Company(String email, String phoneNumber, String companyName, String fullName, String password, String address, String city) {
+    public Company(String email, String phoneNumber, String CompanyName, String fullName, String password, String Address, String city,int p_voted,float rate) {
         this.email = email;
         this.phoneNumber = phoneNumber;
-        CompanyName = companyName;
+        this.CompanyName = CompanyName;
         FullName = fullName;
         this.password = password;
-        Address = address;
+        this.Address = Address;
         this.city = city;
+        this.p_voted=p_voted;
+        this.rate=rate;
     }
 
     public String getEmail() {
@@ -42,16 +49,16 @@ public class Company {
         return CompanyName;
     }
 
-    public void setCompanyName(String companyName) {
-        CompanyName = companyName;
+    public void setCompanyName(String CompanyName) {
+        this.CompanyName = CompanyName;
     }
 
     public String getFullName() {
         return FullName;
     }
 
-    public void setFullName(String fullName) {
-        FullName = fullName;
+    public void setFullName(String FullName) {
+        this.FullName = FullName;
     }
 
     public String getPassword() {
@@ -66,8 +73,8 @@ public class Company {
         return Address;
     }
 
-    public void setAddress(String address) {
-        Address = address;
+    public void setAddress(String Address) {
+        this.Address = Address;
     }
 
     public String getCity() {
@@ -76,5 +83,36 @@ public class Company {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public int getP_voted() {
+        return p_voted;
+    }
+
+    public void setP_voted(int p_voted) {
+        this.p_voted = p_voted;
+    }
+
+    public float getRate() {
+        return rate;
+    }
+
+    public void setRate(float rate) {
+        this.rate = rate;
+    }
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("email", email);
+        result.put("phoneNumber", phoneNumber);
+        result.put("password", password);
+        result.put("FullName", FullName);
+        result.put("city", city);
+        result.put("Address", Address);
+        result.put("p_voted", p_voted);
+        result.put("rate", rate);
+        result.put("CompanyName", CompanyName);
+
+
+        return result;
     }
 }

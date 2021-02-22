@@ -71,10 +71,12 @@
             android:text="new Comment"/>
 
     </com.google.android.material.tabs.TabLayout>
-    <androidx.viewpager2.widget.ViewPager2
+    <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_anchorGravity="bottom"
+        app:layout_anchor="@id/tab_company"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tab_company"
         />
@@ -93,7 +95,7 @@
         android:id="@+id/navigation"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity=""
+        android:layout_gravity="start|left"
         app:headerLayout="@layout/navigation_cpmpany_header"
         app:menu="@menu/menu_drawer_home" />
 

@@ -167,7 +167,7 @@
 
 
     <TextView
-        android:id="@+id/text1"
+        android:id="@+id/txt_change_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_16"
@@ -189,7 +189,7 @@
         android:textColor="@color/purple_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/text1"
-        app:layout_constraintTop_toTopOf="@+id/text1" />
+        app:layout_constraintStart_toEndOf="@+id/txt_change_password"
+        app:layout_constraintTop_toTopOf="@+id/txt_change_password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

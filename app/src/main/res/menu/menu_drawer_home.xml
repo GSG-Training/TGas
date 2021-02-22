@@ -12,7 +12,9 @@
     <item android:id="@+id/about_us"
         android:icon="@drawable/ic_request"
         android:title="about us"/>
-
+<item android:id="@+id/chats"
+      android:icon="@drawable/ic_chat"
+      android:title="Chats" />
     <item android:id="@+id/policy_data"
         android:icon="@drawable/ic_policydata"
         android:title="Policy of terms"/>

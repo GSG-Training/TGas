@@ -1,6 +1,7 @@
 package com.example.project_test.view.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +18,15 @@ import java.util.List;
 public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyHolder> {
     Context context;
     List<Company> companies;
+    private OnItemClicked onItemClicked;
+  public   interface OnItemClicked{
+        void onClicked(int position);
+    }
 
-    public CompanyAdapter(Context context, List<Company> companies) {
+    public CompanyAdapter(Context context, List<Company> companies,OnItemClicked onItemClicked) {
         this.context = context;
         this.companies = companies;
+        this.onItemClicked=onItemClicked;
     }
 
     @NonNull
@@ -33,6 +39,14 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyH
     @Override
     public void onBindViewHolder(@NonNull CompanyHolder holder, int position) {
       holder.company_name.setText(companies.get(position).getCompanyName());
+      holder.txt_rate.setText(companies.get(position).getRate()+"");
+      holder.itemView.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              onItemClicked.onClicked(position);
+              Log.d("position",position+"");
+          }
+      });
     }
 
     @Override
@@ -40,10 +54,12 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyH
         return companies.size();
     }
     public class CompanyHolder extends  RecyclerView.ViewHolder{
-          TextView company_name;
+          TextView company_name,txt_rate;
+
         public CompanyHolder(@NonNull View itemView) {
             super(itemView);
             company_name=itemView.findViewById(R.id.txt_company_name);
+            txt_rate=itemView.findViewById(R.id.txt_rate);
         }
     }
 }

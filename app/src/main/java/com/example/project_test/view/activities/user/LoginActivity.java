@@ -72,10 +72,10 @@ public class LoginActivity extends AppCompatActivity implements Observer<Result>
     public void onStart() {
         super.onStart();
         //Check if user is signed in (non-null) and update UI accordingly.
-      /*  FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            startActivity(new Intent(LoginActivity.this,HomeActivity.class));
-        }*/
+     //   FirebaseUser currentUser = mAuth.getCurrentUser();
+      //  if(currentUser != null){
+          //  startActivity(new Intent(LoginActivity.this,CompanyHome.class));
+       // }
     }
 
     @Override

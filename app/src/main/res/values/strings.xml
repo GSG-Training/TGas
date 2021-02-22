@@ -22,6 +22,17 @@
     <string name="nuseirat" translatable="false">Nuseirat</string>
     <string name="northgaza" translatable="false">North Gaza</string>
     <string name="southgaza" translatable="false">South Gaza</string>
+    <string name="people_voted" translatable="false">%d people voted</string>
+    <string name="you_must_fill_all_the_field" translatable="false">You must fill all the field</string>
+    <string name="select_the_service_you_want" translatable="false">Select the service you want</string>
+    <string name="buy_one" translatable="false">Buy one</string>
+    <string name="fill_one" translatable="false">fill one</string>
+    <string name="select_the_size" translatable="false">select the size</string>
+    <string name="address" translatable="false">Address</string>
+    <string name="phone_number" translatable="false">phone number</string>
+    <string name="price" translatable="false">price</string>
+    <string name="you_paid_for_company1_100_at_10_1_2020" translatable="false">You paid for %s %d$ at %l</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 
 </resources>

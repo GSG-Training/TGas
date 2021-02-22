@@ -12,16 +12,18 @@ public class Users implements Parcelable {
     private String password;
     private String city;
     private String FullName;
+    private int balance;
 
     public Users() {
     }
 
-    public Users(String email, String phoneNumber, String password, String FullName, String city) {
+    public Users(String email, String phoneNumber, String password, String FullName, String city,int balance) {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.password = password;
         this.FullName = FullName;
         this.city = city;
+        this.balance=balance;
     }
 
     public String getEmail() {
@@ -60,6 +62,14 @@ public class Users implements Parcelable {
         return city;
     }
 
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
     public void setCity(String city) {
         this.city = city;
     }
@@ -76,6 +86,7 @@ public class Users implements Parcelable {
         dest.writeString(password);
         dest.writeString(FullName);
         dest.writeString(city);
+        dest.writeInt(balance);
 
     }
     // this is used to regenerate your object. All Parcelables must have a CREATOR that implements these two methods
@@ -96,6 +107,7 @@ public class Users implements Parcelable {
         password=in.readString();
         FullName=in.readString();
         city=in.readString();
+        balance=in.readInt();
     }
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
@@ -104,7 +116,7 @@ public class Users implements Parcelable {
         result.put("password", password);
         result.put("FullName", FullName);
         result.put("city", city);
-
+        result.put("balance",balance);
         return result;
     }
 }

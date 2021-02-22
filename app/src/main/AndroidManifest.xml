@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.project_test">
-   <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,10 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_test">
-        <activity android:name=".view.activities.user.SignUpActivity2"/>
+        <activity android:name=".view.activities.user.MessageActivity"></activity>
+        <activity android:name=".view.activities.company.OrderCompanyActivity" />
+        <activity android:name=".view.activities.user.SettingActivity" />
+        <activity android:name=".view.activities.user.SignUpActivity2" />
         <activity android:name=".view.activities.company.CompanyHome">
             <intent-filter>
-               . <action android:name="android.intent.action.SEARCH" />
+                <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
 
             <meta-data
@@ -24,24 +29,30 @@
         <activity android:name=".view.activities.user.AboutUsActivity" />
         <activity android:name=".view.activities.user.MyorderActivity" />
         <activity android:name=".view.activities.user.CompanyActivity" />
-        <activity android:name=".view.activities.user.HomeActivity">
-
-        </activity>
+        <activity android:name=".view.activities.user.HomeActivity" />
         <activity android:name=".view.activities.user.SignUpActivity" />
         <activity android:name=".view.activities.user.NewPassword" />
         <activity android:name=".view.activities.user.CodeVerification" />
         <activity android:name=".view.activities.user.SendVerification" />
-        <activity android:name=".view.activities.user.LoginActivity" >
+        <activity android:name=".view.activities.user.LoginActivity"></activity>
+        <activity android:name=".view.activities.user.GuideActivity" />
+        <activity android:name=".view.activities.user.PolicyActivity" />
+        <activity android:name=".view.activities.user.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activities.user.GuideActivity" />
-        <activity android:name=".view.activities.user.PolicyActivity" />
-        <activity android:name=".view.activities.user.MainActivity" />
         <activity android:name=".view.activities.ProfileActivity" />
+
+        <service
+            android:name=".model.utils.notification.MyFirebaseMessageService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
